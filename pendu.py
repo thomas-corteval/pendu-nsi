@@ -31,8 +31,10 @@ while tentatives < 7:
         lettres_trouvees = lettres_trouvees + proposition
         print("Bonne lettre!")
         for i in range(len(solution_minuscule)):
-            tiret_bas[dico_mot.index(proposition)] = proposition
+            l=[i for i in range(len(solution_minuscule)) if solution_minuscule[i]== proposition]
+            tiret_bas[dico_mot.index(proposition)] = l[i]
         print(tiret_bas)
+        print(l)
     else:
         print("Raté, il vous reste ", 7 - tentatives, " tentatives")
         print(dico_fautes[tentatives])
