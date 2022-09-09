@@ -30,8 +30,8 @@ while tentatives < 7:
     if proposition in solution:
         lettres_trouvees = lettres_trouvees + proposition
         print("Bonne lettre!")
-        print("index de: ", proposition, " ", dico_mot.index("e"))
-        tiret_bas[dico_mot.index(proposition)] = proposition
+        for i in range(len(solution_minuscule)):
+            tiret_bas[dico_mot.index(proposition)] = proposition
         print(tiret_bas)
     else:
         print("Raté, il vous reste ", 7 - tentatives, " tentatives")
