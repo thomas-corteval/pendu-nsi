@@ -32,7 +32,8 @@ while tentatives < 7:
         print("Bonne lettre!")
         for i in range(len(solution_minuscule)):
             l=[i for i in range(len(solution_minuscule)) if solution_minuscule[i]== proposition]
-            tiret_bas[dico_mot.index(proposition)] = l[i]
+            for i in range(len(l)):
+                tiret_bas[l[i]] = proposition
         print(tiret_bas)
         print(l)
     else:
